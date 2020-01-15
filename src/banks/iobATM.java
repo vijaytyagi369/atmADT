@@ -24,7 +24,7 @@ public class iobATM implements ATM {
     }
     @Override
     public double withdraw(double amt) {
-        if(amt<this.amt){
+        if(amt<this.amt && amt>=0) {
             this.amt=this.amt-amt;
             System.out.println("Your Balance After Withdrawl = " +this.amt);
         }
